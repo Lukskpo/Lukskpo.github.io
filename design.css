@@ -1,5 +1,27 @@
 body{
     background-color: #48e;
+    margin: 0 0;
+}
+
+header{
+    z-index: 1000;
+    position: fixed;
+    min-width: 500px;
+    max-width: 90%;
+    width: 100%;
+    top:0;
+    left: 5%;
+    background: #2007;
+    border: 5px solid #03b;
+    border-top: 5px solid #0007;
+    border-radius: 0 0 50px 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content:space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* es para retrocompatibilidad con safari*/
 }
 
 img{
@@ -39,22 +61,22 @@ li{
     border-style: solid;
     border-radius: 50px;
     background: #200000;
-    padding: 20px;
-    width: 90%;
-    margin: 40px auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    align-items: start;
-
+    min-width: 500px;
+    max-width: 90%;
+    margin: 100px auto;
+    display: grid;
+    justify-content:center;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr)) ;
+    gap: 20px;
+    /* flex-wrap: wrap; */
+    /* align-items: start; */
+    box-sizing: border-box;
 }
 
 .cubos{
     background-color: #0007;
-    width: 30%;
     height: 350px;
-    margin: 50px 100px;
+    margin: 100px 20px;
     text-align: center;
     border: 5px solid #03b;
     /*Con el de arriba nos ahorramos escribir esto:
@@ -63,17 +85,18 @@ li{
     border-style: solid;*/
     border-radius: 50px;
     padding: 5px;
-    box-shadow: 0 0 15px 0 #fff4;
-    display: inline-block;
-    box-sizing: border-box;
+    box-shadow: 0 0 15px 0 #000;
+    /* display: inline-block;
+    box-sizing: border-box; */
     overflow: hidden;
     cursor: pointer;
     transition: background-color 2s linear;
 }
 
-.cubos:hover{
-    background-color: #03f7;
-    height:fit-content;
+nav:hover{
+    background-color: #0007;
+    box-shadow: 0 0 15px 0 #fff4;
+    cursor: pointer;
 }
 
 span{
@@ -82,3 +105,11 @@ span{
     text-decoration-thickness: 2px; 
 }
 
+nav{
+    padding: 10px 0;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
