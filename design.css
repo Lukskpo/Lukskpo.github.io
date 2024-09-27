@@ -6,11 +6,9 @@ body{
 header{
     z-index: 1000;
     position: fixed;
-    min-width: 500px;
-    max-width: 90%;
-    width: 100%;
     top:0;
     left: 5%;
+    right: 5%;
     background: #2007;
     border: 5px solid #03b;
     border-top: 5px solid #0007;
@@ -57,10 +55,10 @@ li{
 }
 
 .content{
-    border: 5px #03b;
-    border-style: solid;
+    border: 5px solid #03b;
     border-radius: 50px;
-    background: #200000;
+    /* background: #200000; */
+    background:linear-gradient(#fff2 10%,#529f 70%,#2009);
     min-width: 500px;
     max-width: 90%;
     margin: 100px auto;

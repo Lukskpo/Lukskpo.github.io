@@ -12,7 +12,7 @@ const elementos = document.querySelectorAll(".cubos");
                     })
         
                 // Cambia el color de fondo del elemento clickeado
-                elemento.style.backgroundColor = "#03f7";
+                elemento.style.backgroundColor = "#03f4";
                 elemento.style.height = "fit-content";
                 elemento.style.boxShadow = "0 0 15px 0 #fff7";
             });
