@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="design.css">
+    <script src="accion.js" defer></script>
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-item"><a href="index.html">Cube Worldo</a></nav>
+        <nav class="nav-item"><a href="contact.html">Contacto</a></nav>
+        <!-- <nav>Cuando se me ocurra algo lo agrego</nav> -->
+    </header>
+    <form>
+        <h1>Formulario de contacto</h1>                                                 <!--2 formas de enlazar el label con el imput-->
+        <fieldset class="form_fieldset">
+            <legend>Información básica</legend>
+            <div class="form_input">
+                <label>Nombre completo:                                                          <!--Esta forma es utilizada cuando van juntos-->
+                    <input placeholder="Ejemplo: José Gonzáles" type="text" name="username">         
+                </label>
+            </div>
+            <div class="form_input">
+                <label>Ciudad:
+                    <select class="select_ciudad" id="mySelect" size="4">
+                        <option value="predet" selected>Seleccione una ciudad</option>
+                        <option value="buenosAires">Buenos Aires</option>
+                        <option value="catamarca">Catamarca</option>
+                        <option value="chaco">Chaco</option>
+                        <option value="chubut">Chubut</option>
+                        <option value="cordoba">Cordoba</option>
+                        <option value="corrientes">Corrientes</option>
+                        <option value="entreRíos">Entre Ríos</option>
+                        <option value="formosa">Formosa</option>
+                        <option value="jujuy">Jujuy</option>
+                        <option value="laPampa">La Pampa</option>
+                        <option value="laRioja">La Rioja</option>
+                        <option value="mendoza">Mendoza</option>
+                        <option value="misiones">Misiones</option>
+                        <option value="neuquen">Neuquen</option>
+                        <option value="ríoNegro">Río Negro</option>
+                        <option value="salta">Salta</option>
+                        <option value="santaCruz">Santa Cruz</option>
+                        <option value="santaFe">Santa Fe</option>
+                        <option value="sanLuis">San Luis</option>
+                        <option value="santiagoDelEstero">Santiago del Estero</option>
+                        <option value="sanJuan">San Juan</option>
+                        <option value="tierraDelFuego">Tierra del Fuego</option>
+                        <option value="tucumán">Tucumán</option>
+                    </select>
+                </label>   
+            </div>
+            <div class="form_input">
+                <label for="email">Email:</label>                                                <!--Y esta se utiliza cuando se tienen -->
+                <input placeholder="ejemplo@gmail.com" type="email" name="email" id="email">     <!--que poner separadas-->
+            </div>
+        </fieldset>
+        <div class="form_input">
+            <label>Dejanos un comentario:
+                <textarea rows="7" placeholder="Ejemplo..." type="text" name="comment"></textarea>
+            </label>
+        </div>
+        <div class="buttons">
+            <button class="send_button">Enviar</button>
+        </div>
+    </form>
+</body>
+</html>

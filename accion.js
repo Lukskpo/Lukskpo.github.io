@@ -25,3 +25,29 @@ const elementos = document.querySelectorAll(".cubos");
                 elemento.style.boxShadow = "0 0 15px 0 #000";
             })
         })
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectElement = document.getElementById('mySelect');
+            
+            // Establecer la opción predeterminada
+            selectElement.value = 'predet'; // Ajusta este valor a la opción que desees
+        });
+        
+
+const selectElement = document.getElementById('mySelect');
+
+    //Iniciliza el tamaño del select a 1 al cargar la página
+    selectElement.size=1;
+
+    selectElement.addEventListener('focus', function() {
+        this.size = 4; // Muestra 4 opciones al enfocar
+    });
+
+    selectElement.addEventListener('blur', function() {
+        this.size = 1; // Vuelve a mostrar solo la opción seleccionada al desenfocar
+    });
+
+    selectElement.addEventListener('change', function() {
+        this.blur(); // Deja de mostrar las opciones cuando se elige una
+    });

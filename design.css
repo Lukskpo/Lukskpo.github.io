@@ -103,7 +103,7 @@ li{
 }
 
 .cubos h1, .cubos h2{
-    color: rgb(44, 236, 140);
+    color: rgba(44, 236, 140, 0.911);
     text-decoration: underline;
     text-decoration-color: #000000;
 }
@@ -125,7 +125,7 @@ nav{
 }
 
 nav a:link, nav a:visited{
-    color: #fff;
+    color: rgba(44, 236, 140, 0.911);
     text-decoration: none;
 }
 
@@ -155,7 +155,85 @@ footer{
 }
 
 .contactarse h2, .conectarse h2, .encontrarnos h2{
-    color: rgb(44, 236, 140);
+    color: rgb(44, 236, 140, 0.911);
     text-decoration: underline;
     text-decoration-color: #000;
+}
+
+
+/*Aca empieza el estilo de contact.html*/
+
+form{
+    box-sizing: border-box;
+    padding: 30px;
+    margin: 100px auto;
+    max-width: 600px;
+    border: 5px solid #03b;
+    border-radius: 50px;
+    background-color: #0007;
+    box-shadow: 0 0 15px 0 #0007;
+}
+
+form h1{
+    color: rgba(44, 236, 140, 0.911);
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    border-radius: 7px;
+    padding: 5px;
+    margin-bottom: 7px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.buttons{
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.send_button{
+    background-color: #fff9;
+    border-radius: 7px;
+    border: 5px solid #03b;
+    padding: 10px;
+    text-transform: uppercase;
+    font: normal normal bold 15px/2px "Montserrat";
+}
+
+
+textarea{
+    width: 100%;
+    resize: vertical;
+    font-family: sans-serif;
+    min-height: 100px;
+    max-height: 200px;
+    border-radius: 7px;
+    margin-bottom: 7px;
+}
+
+label{
+    font-family: sans-serif;
+    color: rgba(44, 236, 140, 0.911);
+    font-size: 1em;
+    line-height: 2;
+}
+
+.select_ciudad{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form_fieldset{
+    border: 2px solid #03b;
+    border-radius: 7px;
+    padding: 20px;
+}
+
+legend{
+    color: rgba(44, 236, 140, 0.911);
+    padding: 5px;
 }
