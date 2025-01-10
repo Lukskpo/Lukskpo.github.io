@@ -13,7 +13,7 @@ const elementos = document.querySelectorAll(".cubos");
         
                 // Cambia el color de fondo del elemento clickeado
                 elemento.style.backgroundColor = "#03f4";
-                elemento.style.height = "fit-content";
+                elemento.style.height = "auto";
                 elemento.style.boxShadow = "0 0 15px 0 #fff7";
             });
         });
@@ -31,7 +31,7 @@ const elementos = document.querySelectorAll(".cubos");
             const selectElement = document.getElementById('mySelect');
             
             // Establecer la opción predeterminada
-            selectElement.value = 'predet'; // Ajusta este valor a la opción que desees
+            selectElement.value = 'default'; // Ajusta este valor a la opción que desees
         });
         
 

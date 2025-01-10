@@ -1,7 +1,13 @@
+
+/* Aca esta solo lo aplicado al body*/
+
 body{
     background-color: #48e;
     margin: 0 0;
+    min-height: 100dvh;
 }
+
+/*Aca esta aplicado lo que es del header*/
 
 a:link ,a:visited{
     color: inherit;
@@ -16,20 +22,94 @@ header{
     right: 5%;
     background: #2007;
     border: 5px solid #03b;
-    border-top: 5px solid #0007;
+    border-top: none;
     border-radius: 0 0 50px 50px;
     box-sizing: border-box;
     display: flex;
     justify-content:space-around;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 25px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* es para retrocompatibilidad con safari y otros navegadores*/
+    font-size: 1.65em;
+    backdrop-filter: blur(10px);            /* es recomendable poner ambos */
+    -webkit-backdrop-filter: blur(10px);    /* es para retrocompatibilidad con safari y otros navegadores */
+}
+
+.header_nav{
+    color: rgba(44, 236, 140, 0.911);
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.header_nav:hover{
+    cursor: pointer;
+}
+
+.header_nav a:visited{
+    color: rgba(44, 236, 140, 0.911);
+    text-decoration: none;
+}
+
+.log{
+    padding: 0;
+    margin: 0;
+    opacity: 0.8;
+    height: 1.5em;
+    width: auto;
+}
+
+/*Aca esta aplicado lo que es de index.html*/
+
+
+.container{
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    border: 5px solid #03b;
+    border-radius: 50px;
+    background:linear-gradient(#fff2 10%,#529f 70%,#2009);
+    min-width: 500px;
+    max-width: 90%;
+    margin: 100px auto;
+    display: grid;
+    justify-content:center;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr)) ;
+    gap: 20px;
+    box-sizing: border-box;
+    line-height: 0;
+    padding: 0 40px;
+}
+
+.cubos{
+    background-color: #0007;
+    height: 350px;
+    margin: 100px 20px;
+    text-align: center;
+    border: 5px solid #03b;
+    /*Con el de arriba nos ahorramos escribir esto:
+    border-width: 5px;
+    border-color: lightskyblue;
+    border-style: solid;*/
+    border-radius: 50px;
+    padding: 5px;
+    box-shadow: 0 0 15px 0 #000;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s linear, height 3s ease, box-shadow 1s ease;
+}
+
+.cubos h1, .cubos h2{
+    color: rgba(44, 236, 140, 0.911);
 }
 
 img{
     height: 80px ;
     width: 80px ;
+    border-radius: 10px;
 }
 
 p,li{
@@ -59,94 +139,31 @@ li{
     line-height: 1.5;
 }
 
-.container{
-    display: grid;
-    grid-template-rows: 1fr auto ;
-    min-height: 100vh;
-}
-
-.content{
-    border: 5px solid #03b;
-    border-radius: 50px;
-    /* background: #200000; */
-    background:linear-gradient(#fff2 10%,#529f 70%,#2009);
-    min-width: 500px;
-    max-width: 90%;
-    margin: 100px auto;
-    display: grid;
-    justify-content:center;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr)) ;
-    gap: 20px;
-    /* flex-wrap: wrap; */
-    /* align-items: start; */
-    box-sizing: border-box;
-}
-
-.cubos{
-    background-color: #0007;
-    height: 350px;
-    margin: 100px 20px;
-    text-align: center;
-    border: 5px solid #03b;
-    /*Con el de arriba nos ahorramos escribir esto:
-    border-width: 5px;
-    border-color: lightskyblue;
-    border-style: solid;*/
-    border-radius: 50px;
-    padding: 5px;
-    box-shadow: 0 0 15px 0 #000;
-    /* display: inline-block;
-    box-sizing: border-box; */
-    overflow: hidden;
-    cursor: pointer;
-    transition: background-color 2s linear;
-}
-
-.cubos h1, .cubos h2{
-    color: rgba(44, 236, 140, 0.911);
-    text-decoration: underline;
-    text-decoration-color: #000000;
-}
-
-nav:hover{
-    background-color: #0007;
-    box-shadow: 0 0 15px 0 #fff4;
-    cursor: pointer;
-}
-
 span{
     text-decoration: line-through;
     text-decoration-color: black;
     text-decoration-thickness: 2px; 
 }
 
-nav{
-    padding: 10px 0;
-}
-
-nav a:link, nav a:visited{
-    color: rgba(44, 236, 140, 0.911);
-    text-decoration: none;
-}
+/*Aca esta aplicado lo que es del footer*/
 
 footer{
     line-height: 0; /*Elimina el espacio vertical no deseado*/
-    background-color: inherit;
     display: grid;
     justify-content: center;
     margin: 0 5%;
     padding: 0;
     border: 5px solid #03b;
-    border-bottom: none;
+    border-bottom: 10px solid #2009;
     border-radius: 50px 50px 0 0;
     box-sizing: border-box;
     grid-template-columns: repeat(auto-fit,minmax(350px,1fr)) ;
     gap: 20px;
     background:linear-gradient(#fff2 10%,#529f 70%,#2009);
-    overflow: hidden;
 }
 
 .contactarse, .conectarse, .encontrarnos{
+    line-height: 0; /*Elimina el espacio vertical no deseado*/
     margin: 0;
     padding: 0;
     display: grid;
@@ -160,10 +177,9 @@ footer{
     text-decoration-color: #000;
 }
 
-
 /*Aca empieza el estilo de contact.html*/
 
-form{
+.contact_form{
     box-sizing: border-box;
     padding: 30px;
     margin: 100px auto;
@@ -174,12 +190,15 @@ form{
     box-shadow: 0 0 15px 0 #0007;
 }
 
-form h1{
+.contact_form h1{
     color: rgba(44, 236, 140, 0.911);
     text-align: center;
 }
 
-input{
+.inputs{
+    background-color: #9998;
+    color: #fffd;
+    border: none;
     width: 100%;
     border-radius: 7px;
     padding: 5px;
@@ -189,31 +208,30 @@ input{
 }
 
 .buttons{
+    margin-top: 20px;
     box-sizing: border-box;
     text-align: center;
 }
 
 .send_button{
-    background-color: #fff9;
+    color: #fff9;
+    background-color: #9998;
     border-radius: 7px;
     border: 5px solid #03b;
     padding: 10px;
     text-transform: uppercase;
     font: normal normal bold 15px/2px "Montserrat";
+    cursor: pointer;
+    transition: box-shadow 0.5s linear,color 0.5s linear;
 }
 
-
-textarea{
-    width: 100%;
-    resize: vertical;
-    font-family: sans-serif;
-    min-height: 100px;
-    max-height: 200px;
-    border-radius: 7px;
-    margin-bottom: 7px;
+.send_button:hover{
+    transition: box-shadow 0.5s linear, color 0.5s linear; 
+    color: rgba(44, 236, 140, 0.911);
+    box-shadow: 0 0 5px 0 #fff7;
 }
 
-label{
+.form_label{
     font-family: sans-serif;
     color: rgba(44, 236, 140, 0.911);
     font-size: 1em;
@@ -221,19 +239,89 @@ label{
 }
 
 .select_ciudad{
+    background-color: #9998;
+    color: #fffd;
+    border: none;
     width: 100%;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.form_fieldset{
-    border: 2px solid #03b;
-    border-radius: 7px;
-    padding: 20px;
+.select_ciudad:first-child{
+    color: #fff9;
 }
 
-legend{
-    color: rgba(44, 236, 140, 0.911);
+.check{
+    width: auto;
+    height: 18px;
+    background-color: #000;
+}
+
+.texto{
+    background-color: #9998;
+    border: none;
+    color: #fffd;
     padding: 5px;
+    width: 100%;
+    resize: vertical;
+    font-family: sans-serif;
+    min-height: 100px;
+    max-height: 200px;
+    border-radius: 7px;
+    margin-bottom: 7px;
+    box-sizing: border-box;
+}
+
+.form_fieldset{
+    border: 2px solid #fff6;
+    border-radius: 7px;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 10px;
+}
+
+.form_legend{
+    color: #fffd;
+    padding: 5px;
+}
+
+.comment_fieldset{
+    border: 2px solid #fff6;
+    border-radius: 7px;
+    padding: 10px 20px 10px 20px;
+}
+
+.texto:focus, .inputs:focus{
+    outline: none;
+}
+
+/* Aca empieza el estilo de log.html */
+
+.user_form{
+    box-sizing: border-box;
+    padding: 30px;
+    margin: 100px auto;
+    min-height: 600px;
+    max-width: 600px;
+    border: 5px solid #03b;
+    border-radius: 50px;
+    background-color: #0007;
+    box-shadow: 0 0 15px 0 #0007;
+}
+
+.user_form h1{
+    color: rgba(44, 236, 140, 0.911);
+    text-align: center;
+}
+
+.sign_up_button{
+    color: #fff9;
+    background-color: #9998;
+    border-radius: 7px;
+    border: 5px solid #03b;
+    padding: 10px;
+    text-transform: uppercase;
+    font: normal normal bold 15px/2px "Montserrat";
+    cursor: pointer;
+    transition: box-shadow 0.5s linear,color 0.5s linear;
 }

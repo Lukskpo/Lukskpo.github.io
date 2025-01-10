@@ -7,64 +7,98 @@
     <script src="accion.js" defer></script>
     <title>Contacto</title>
 </head>
-<body>
-    <header>
-        <nav class="nav-item"><a href="index.html">Cube Worldo</a></nav>
-        <nav class="nav-item"><a href="contact.html">Contacto</a></nav>
-        <!-- <nav>Cuando se me ocurra algo lo agrego</nav> -->
-    </header>
-    <form>
-        <h1>Formulario de contacto</h1>                                                 <!--2 formas de enlazar el label con el imput-->
-        <fieldset class="form_fieldset">
-            <legend>Información básica</legend>
-            <div class="form_input">
-                <label>Nombre completo:                                                          <!--Esta forma es utilizada cuando van juntos-->
-                    <input placeholder="Ejemplo: José Gonzáles" type="text" name="username">         
-                </label>
+<div>
+    <div class="container">
+        <header>
+            <nav class="header_nav"><a href="index.html">Cube Worldo</a></nav>
+            <nav class="header_nav"><a href="contact.html">Contacto</a></nav>
+            <nav class="header_nav"><a href="log.html"><img class="log" src="Imagenes/inicio_sesion.png"></a></nav>
+            <!-- <nav>Cuando se me ocurra algo lo agrego</nav> -->
+        </header>
+        <main>
+            <form class="contact_form">
+                <h1>Formulario de contacto</h1>                                                 <!--2 formas de enlazar el label con el imput-->
+                <fieldset class="form_fieldset">
+                    <legend class="form_legend">Información básica</legend>
+                    <div class="form_input">
+                        <label class="form_label">Nombre completo:                                                          <!--Esta forma es utilizada cuando van juntos-->
+                            <input class="inputs" placeholder="Ejemplo: José Gonzáles" type="text" name="username">         
+                        </label>
+                    </div>
+                    <div class="form_input">
+                        <label class="form_label">Ciudad:
+                            <select class="select_ciudad" id="mySelect" size="4">
+                                <option value="default" selected>Seleccione una ciudad</option>
+                                <option value="buenosAires">Buenos Aires</option>
+                                <option value="catamarca">Catamarca</option>
+                                <option value="chaco">Chaco</option>
+                                <option value="chubut">Chubut</option>
+                                <option value="cordoba">Cordoba</option>
+                                <option value="corrientes">Corrientes</option>
+                                <option value="entreRíos">Entre Ríos</option>
+                                <option value="formosa">Formosa</option>
+                                <option value="jujuy">Jujuy</option>
+                                <option value="laPampa">La Pampa</option>
+                                <option value="laRioja">La Rioja</option>
+                                <option value="mendoza">Mendoza</option>
+                                <option value="misiones">Misiones</option>
+                                <option value="neuquen">Neuquen</option>
+                                <option value="ríoNegro">Río Negro</option>
+                                <option value="salta">Salta</option>
+                                <option value="santaCruz">Santa Cruz</option>
+                                <option value="santaFe">Santa Fe</option>
+                                <option value="sanLuis">San Luis</option>
+                                <option value="santiagoDelEstero">Santiago del Estero</option>
+                                <option value="sanJuan">San Juan</option>
+                                <option value="tierraDelFuego">Tierra del Fuego</option>
+                                <option value="tucumán">Tucumán</option>
+                            </select>
+                        </label>   
+                    </div>
+                    <div class="form_input">
+                        <label class="form_label" for="email">Email:</label>                                                <!--Y esta se utiliza cuando se tienen -->
+                        <input class="inputs" placeholder="ejemplo@gmail.com" type="email" name="email" id="email">     <!--que poner separadas-->
+                    </div>
+                    <div class="form_input">
+                        <label class="form_label">¿Desea que nos pongamos en contacto con usted?
+                            <input class="check" class="check" name="check" type="checkbox">
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="comment_fieldset">
+                    <legend class="form_legend">Dejanos un comentario</legend>
+                    <div class="form_input">
+                        <textarea class="texto" rows="7" placeholder="Ejemplo..." type="text" name="comment"></textarea>
+                    </div>
+                </fieldset>
+                <div class="buttons">
+                    <button class="send_button">Enviar</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <div class="contactarse">
+                <ul>
+                    <h2>Como contactarnos:</h2>
+                    <li>ejemplo@hotmail.com</li>
+                </ul>
             </div>
-            <div class="form_input">
-                <label>Ciudad:
-                    <select class="select_ciudad" id="mySelect" size="4">
-                        <option value="predet" selected>Seleccione una ciudad</option>
-                        <option value="buenosAires">Buenos Aires</option>
-                        <option value="catamarca">Catamarca</option>
-                        <option value="chaco">Chaco</option>
-                        <option value="chubut">Chubut</option>
-                        <option value="cordoba">Cordoba</option>
-                        <option value="corrientes">Corrientes</option>
-                        <option value="entreRíos">Entre Ríos</option>
-                        <option value="formosa">Formosa</option>
-                        <option value="jujuy">Jujuy</option>
-                        <option value="laPampa">La Pampa</option>
-                        <option value="laRioja">La Rioja</option>
-                        <option value="mendoza">Mendoza</option>
-                        <option value="misiones">Misiones</option>
-                        <option value="neuquen">Neuquen</option>
-                        <option value="ríoNegro">Río Negro</option>
-                        <option value="salta">Salta</option>
-                        <option value="santaCruz">Santa Cruz</option>
-                        <option value="santaFe">Santa Fe</option>
-                        <option value="sanLuis">San Luis</option>
-                        <option value="santiagoDelEstero">Santiago del Estero</option>
-                        <option value="sanJuan">San Juan</option>
-                        <option value="tierraDelFuego">Tierra del Fuego</option>
-                        <option value="tucumán">Tucumán</option>
-                    </select>
-                </label>   
+            <div class="conectarse">
+                <ul>    
+                    <h2>Conocenos:</h2>
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer nofollow">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer nofollow">Tik Tok</a></li>
+                    <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer nofollow">LinkdIn</a></li>
+                </ul>
             </div>
-            <div class="form_input">
-                <label for="email">Email:</label>                                                <!--Y esta se utiliza cuando se tienen -->
-                <input placeholder="ejemplo@gmail.com" type="email" name="email" id="email">     <!--que poner separadas-->
+            <div class="encontrarnos">
+                <ul>
+                    <h2>Donde encontrarnos:</h2>
+                    <li>Ejemplo 123 entre ejemplo y ejemplo</li>
+                    <li><a href="https://www.google.com.ar/maps/place/Buenos+Aires,+Cdad.+Aut%C3%B3noma+de+Buenos+Aires/@-34.6156548,-58.5156988,12z/data=!3m1!4b1!4m6!3m5!1s0x95bcca3b4ef90cbd:0xa0b3812e88e88e87!8m2!3d-34.6036844!4d-58.3815591!16zL20vMDFseTVt!5m1!1e4?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer nofollow">O tocá acá</a></li>
+                </ul>
             </div>
-        </fieldset>
-        <div class="form_input">
-            <label>Dejanos un comentario:
-                <textarea rows="7" placeholder="Ejemplo..." type="text" name="comment"></textarea>
-            </label>
-        </div>
-        <div class="buttons">
-            <button class="send_button">Enviar</button>
-        </div>
-    </form>
+        </footer>
+    </div>
 </body>
 </html>
